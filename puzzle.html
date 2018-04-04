@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Puzzle Game</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="./puzzle.css" />
+<script src="puzzle.js" ></script>
+</head>
+
+
+<body >
+	<h1>Welcome to the Puzzle World! </h1>
+	<h4>CMPT 218 Assignment 1 -- Lydia Zheng</h4>
+	<br>
+
+	<button onclick="showSmallPuzzle(8,8)" id="puzzle1">Small Puzzle(8*8)</button>
+	<button onclick="showSmallPuzzle(12,12)" id="puzzle2">Medium Puzzle(12*12)</button>
+	<button onclick="showSmallPuzzle(16,16)" id="puzzle3">Large Puzzle(16*16)</button>
+
+	<button onclick="showInput()" id="puzzle4">Custom Size</button>
+	<button onclick="refresh()" id="reset">Reset</button>
+
+	<span><div id="input">
+		Row && Column:
+		<input type="number" name="row" id="row" value="12" min="1" max="25">
+		<button onclick="custom()" id="go">Go!</button>	
+	</div></span>
+
+	<div id="alert"><br></div>
+	<br>
+	
+	<div id="small_puzzle" >
+	    <table id="table">
+	      <thead>
+	        <tr id="tableHeader"></tr>
+	      </thead>
+
+	      <tbody id="puzzleMap"></tbody>
+	    </table>
+	</div>
+	<br>
+
+	<button onclick="showResult()" id="reveal">Reveal</button>
+	<button onclick="checkSuccess()" id="submitBtn" >Submit</button>
+	<div  class="tooltip">
+		<button onclick="hint()" id="hint">Hint</button>
+		<span class="tooltiptext">Hint will display one correct cell! ^_^</span>
+	</div>
+
+
+<footer >
